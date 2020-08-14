@@ -1,16 +1,21 @@
 <template>
   <div id="app" class="container">
+    <!--
     <person-manager />
+    -->
+    <phone-filter />
   </div>
 </template>
 
 <script>
-import PersonManager from './components/PersonManager.vue'
+//import PersonManager from './components/PersonManager.vue'
+import PhoneFilter from './components/PhoneFilter.vue'
 
 export default {
   name: 'App',
   components: {
-    PersonManager
+    //PersonManager,
+    PhoneFilter
   }
 }
 </script>
