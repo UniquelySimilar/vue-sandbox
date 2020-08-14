@@ -1,25 +1,38 @@
 <template>
     <div>
-        <label>Phone Filter: </label>
-        <input type="text" v-model="phoneNumber" v-on:input="formatPhone" />
-        </div>
+        <label v-if="useLabel"><slot>Set label slot</slot>:</label>
+        <input type="text" v-model="inputNumber" v-on:input="filterDigits" />
+    </div>
 </template>
 
 <script>
     export default {
         data() {
             return {
-                phoneNumber: '',
+                inputNumber: '',
                 previousValue: '',
             }
         },
+        props: {
+            useLabel: {
+                type: Boolean,
+                default: false
+            },
+            numDigits: {
+                type: Number,
+                required: true
+            }
+        },
         methods: {
-            formatPhone(event) {
+            filterDigits(event) {
                 // NOTE: This 'event' is and instance of 'InputEvent'
                 let newValue = event.target.value;
                 let isNum = /^\d+$/.test(newValue);
-                if (isNum) {
-                    this.phoneNumber = newValue;
+                if (newValue.length > this.numDigits) {
+                    event.preventDefault();
+                }
+                else if (isNum) {
+                    this.inputNumber = newValue;
                     this.previousValue = newValue;
                 }
                 else {
@@ -27,7 +40,7 @@
                     if (this.previousValue.length == 1 && !event.data) {
                         this.previousValue = '';
                     }
-                    this.phoneNumber = this.previousValue;
+                    this.inputNumber = this.previousValue;
                     event.preventDefault();
                 }
             }
@@ -36,5 +49,7 @@
 </script>
 
 <style scoped>
-
+    label {
+        margin-right: 1em;
+    }
 </style>

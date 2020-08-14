@@ -1,21 +1,18 @@
 <template>
   <div id="app" class="container">
-    <!--
-    <person-manager />
-    -->
-    <phone-filter />
+    <digits-input :use-label="true" :num-digits="10">Digits Input</digits-input>
   </div>
 </template>
 
 <script>
 //import PersonManager from './components/PersonManager.vue'
-import PhoneFilter from './components/PhoneFilter.vue'
+import DigitsInput from './components/DigitsInput.vue'
 
 export default {
   name: 'App',
   components: {
     //PersonManager,
-    PhoneFilter
+    DigitsInput
   }
 }
 </script>
