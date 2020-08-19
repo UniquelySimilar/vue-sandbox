@@ -4,8 +4,8 @@
     <digits-input :use-label="true" :num-digits="10">Digits Input</digits-input>
     <person-manager />
     -->
-    <button type="button" v-on:click="displayModalHandler">Display Modal</button>
-    <modal-dialog v-if="displayModal" v-on:closeModalEvt="closeModal" />
+    <button type="button" v-on:click="displayDeleteModal">Display Modal</button>
+    <modal-dialog v-if="displayModal" v-on:closeModalEvent="closeModal" />
   </div>
 </template>
 
@@ -27,7 +27,7 @@ export default {
     }
   },
   methods: {
-    displayModalHandler() {
+    displayDeleteModal() {
       this.displayModal = true;
     },
     closeModal() {
