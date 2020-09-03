@@ -20,12 +20,18 @@
   </div>
   
 </div>  
+    <!-- Add to App.vue template
+    <button type="button" v-on:click="displayDeleteModal">Display Modal</button>
+    <modal-dialog v-if="displayModal" v-on:closeModalEvent="closeModal" />
+    -->
 </template>
 
 <script>
   export default {
     data() {
       return {
+        // Add to App.vue data
+        //   displayModal: false
       }
     },
     methods: {
@@ -35,6 +41,13 @@
       deleteRecord() {
         this.$emit('closeModalEvent')
       }
+      // Add to App.vue methods
+      // displayDeleteModal() {
+      // this.displayModal = true;
+      // },
+      // closeModal() {
+      //   this.displayModal = false;
+      // }
     }
   }
 </script>

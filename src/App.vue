@@ -1,38 +1,22 @@
 <template>
   <div id="app" class="container">
-      <!--
-    <digits-input :use-label="true" :num-digits="10">Digits Input</digits-input>
-    <person-manager />
-    -->
-    <button type="button" v-on:click="displayDeleteModal">Display Modal</button>
-    <modal-dialog v-if="displayModal" v-on:closeModalEvent="closeModal" />
+    <array-update />
   </div>
 </template>
 
 <script>
-//import PersonManager from './components/PersonManager.vue'
-//import DigitsInput from './components/DigitsInput.vue'
-import ModalDialog from './components/ModalDialog.vue'
+import ArrayUpdate from './components/ArrayUpdate.vue'
 
 export default {
   name: 'App',
   components: {
-    //PersonManager,
-    //DigitsInput
-    ModalDialog
+    ArrayUpdate
   },
   data() {
     return {
-      displayModal: false
     }
   },
   methods: {
-    displayDeleteModal() {
-      this.displayModal = true;
-    },
-    closeModal() {
-      this.displayModal = false;
-    }
   }
 }
 </script>

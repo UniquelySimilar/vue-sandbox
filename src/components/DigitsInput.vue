@@ -3,6 +3,9 @@
         <label v-if="useLabel"><slot>Set label slot</slot>:</label>
         <input type="text" v-model="inputNumber" v-on:input="filterDigits" />
     </div>
+    <!-- Add to App.vue template
+    <digits-input :use-label="true" :num-digits="10">Digits Input</digits-input>
+    -->
 </template>
 
 <script>
