@@ -1,24 +1,24 @@
 <template>
   <div id="app" class="container">
-    <array-update />
+    <responsive-grid-view />
   </div>
 </template>
 
 <script>
-import ArrayUpdate from './components/ArrayUpdate.vue'
+  import ResponsiveGridView from './components/ResponsiveGridView.vue'
 
-export default {
-  name: 'App',
-  components: {
-    ArrayUpdate
-  },
-  data() {
-    return {
+  export default {
+    name: 'App',
+    components: {
+      ResponsiveGridView
+    },
+    data() {
+      return {
+      }
+    },
+    methods: {
     }
-  },
-  methods: {
   }
-}
 </script>
 
 <style>
