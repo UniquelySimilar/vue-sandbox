@@ -1,16 +1,17 @@
 <template>
   <div id="app" class="container">
-    <responsive-grid-view />
+    <h3>Vue Sandbox</h3>
+    <css-grid-layout />
   </div>
 </template>
 
 <script>
-  import ResponsiveGridView from './components/ResponsiveGridView.vue'
-
+  import CssGridLayout from './components/CssGridLayout.vue'
+  
   export default {
     name: 'App',
     components: {
-      ResponsiveGridView
+      CssGridLayout
     },
     data() {
       return {
