@@ -1,17 +1,17 @@
 <template>
   <div id="app" class="container">
     <h3>Vue Sandbox</h3>
-    <css-grid-layout />
+    <select-test />
   </div>
 </template>
 
 <script>
-  import CssGridLayout from './components/CssGridLayout.vue'
+  import SelectTest from './components/selecttest/SelectTest.vue'
   
   export default {
     name: 'App',
     components: {
-      CssGridLayout
+      SelectTest
     },
     data() {
       return {
