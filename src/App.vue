@@ -1,32 +1,20 @@
 <template>
   <div id="app" class="container">
-    <h3>Vue Sandbox</h3>
-    <select-test />
+    <bg-color-prop-test bgColor="coral" />
   </div>
 </template>
 
 <script>
-  import SelectTest from './components/selecttest/SelectTest.vue'
+  import BgColorPropTest from '@/components/BgColorPropTest.vue'
   
   export default {
     name: 'App',
     components: {
-      SelectTest
-    },
-    data() {
-      return {
-      }
-    },
-    methods: {
+      BgColorPropTest
     }
   }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
-}
+
 </style>
