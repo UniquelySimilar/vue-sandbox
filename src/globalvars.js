@@ -14,4 +14,12 @@ var persons = [
     new Person(4, 'Alice', 'female', 34)
 ]
 
-export { Person, persons };
+class Entry {
+  constructor(id, ownerName, dogName) {
+    this.id = id;
+    this.ownerName = ownerName;
+    this.dogName = dogName;
+  }
+}
+
+export { Person, persons, Entry };

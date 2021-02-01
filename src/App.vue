@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <person-manager />
+    <create-entries />
   </div>
 </template>
 
 <script>
-  import PersonManager from '@/components/PersonManager'
+  import CreateEntries from '@/components/CreateEntries'
   
   export default {
     name: 'App',
     components: {
-      PersonManager
+      CreateEntries
     }
   }
 </script>
