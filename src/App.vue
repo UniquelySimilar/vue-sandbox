@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <bg-color-prop-test bgColor="coral" />
+    <person-manager />
   </div>
 </template>
 
 <script>
-  import BgColorPropTest from '@/components/BgColorPropTest.vue'
+  import PersonManager from '@/components/PersonManager'
   
   export default {
     name: 'App',
     components: {
-      BgColorPropTest
+      PersonManager
     }
   }
 </script>
