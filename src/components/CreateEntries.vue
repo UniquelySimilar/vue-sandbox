@@ -3,15 +3,21 @@
 
     <div class="row">
 
-      <div class="col-md-4 form-container">
+      <div class="col-sm-4 form-container">
         <form @submit.prevent="saveEntry">
           <div class="form-group">
             <label>Owner Name</label>
-            <input type="text" v-model="entry.ownerName" class="form-control">
+            <input type="text" class="form-control"
+              v-model.trim="entry.ownerName" :disabled="entries.length === maxEntries">
+            <span class="text-danger"
+              v-if="validationMsgs.has('ownerName')">{{ validationMsgs.get('ownerName') }}</span>
           </div>
           <div class="form-group">
             <label>Dog Name</label>
-            <input type="text" v-model="entry.dogName" class="form-control">
+            <input type="text" class="form-control"
+              v-model.trim="entry.dogName" :disabled="entries.length === maxEntries">
+            <span class="text-danger"
+              v-if="validationMsgs.has('dogName')">{{ validationMsgs.get('dogName') }}</span>
           </div>
           <div class="form-group">
             <button v-if="entries.length < maxEntries" class="btn btn-primary" type="submit">Save Entry</button>
@@ -20,12 +26,14 @@
         </form>
       </div>
 
-      <div class="col-md-6" v-if="entries.length >= 0">
-        <div class="col-md-3">
-          <span class="bold-text">Current Entries:</span>
+      <div class="col-sm-1"></div>
+
+      <div class="col-sm-6 table-container">
+        <div>
+          <span class="bold-text">{{ currentEntriesTitle }}</span>
         </div>
 
-        <div class="col-md-8">
+        <div v-if="entries.length > 0">
           <table class="table table-bordered">
             <thead>
               <tr>
@@ -42,6 +50,7 @@
               </tr>
             </tbody>
           </table>
+          <button type="button" class="btn btn-primary clear-btn" @click="clearEntries">Clear Entries</button>
         </div>
       </div>
 
@@ -58,7 +67,8 @@
       return {
         entry: {},
         entries: [],
-        maxEntries: 5
+        maxEntries: 5,
+        validationMsgs: new Map()
       }
     },
     computed: {
@@ -71,16 +81,43 @@
         }
 
         return maxId + 1;
+      },
+      currentEntriesTitle() {
+        return this.entries.length === 0 ? 'No Current Entries' : 'Current Entries';
       }
     },
     methods: {
+      validateEntry () {
+        this.validationMsgs = new Map();
+
+        if (this.entry.ownerName.length === 0) {
+          this.validationMsgs.set('ownerName', 'Owner name required');
+        }
+
+        if (this.entry.dogName.length === 0) {
+          this.validationMsgs.set('dogName', 'Dog name required');
+        }
+
+        if (this.validationMsgs.size > 0) {
+          return false;
+        }
+
+        return true;
+      },
       saveEntry() {
+        if (!this.validateEntry()) {
+          return;
+        }
+
         this.entry.id = this.nextId;
         this.entries.push(this.entry);
         this.initEntry();
       },
       initEntry() {
         this.entry = new Entry(0, '', '');
+      },
+      clearEntries() {
+        this.entries = [];
       }
     },
     created() {
@@ -93,8 +130,12 @@
   .create-entries {
     margin-top: 1em;
   }
+  
+  .clear-btn {
+    margin-bottom: 1em;
+  }
 
-  .form-container {
+  .form-container, .table-container {
     background-color: lightcyan;
     border: 1px solid darkcyan;
     border-radius: 4px;
