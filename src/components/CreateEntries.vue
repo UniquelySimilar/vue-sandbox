@@ -75,9 +75,8 @@
       nextId() {
         let maxId = 0;
         if (this.entries.length > 0) {
-          maxId = Math.max.apply(Math, this.entries.map(function (entry) {
-            return entry.id;
-          }));
+          let idAry = this.entries.map( entry => entry.id );
+          maxId = Math.max(...idAry);
         }
 
         return maxId + 1;
