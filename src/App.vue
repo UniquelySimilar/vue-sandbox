@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <create-entries />
+    <multi-checkbox-bound-array />
   </div>
 </template>
 
 <script>
-  import CreateEntries from '@/components/CreateEntries'
+  import MultiCheckboxBoundArray from '@/components/MultiCheckboxBoundArray'
   
   export default {
     name: 'App',
     components: {
-      CreateEntries
+      MultiCheckboxBoundArray
     }
   }
 </script>
