@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <axios-async-await />
+    <initial-data-sort />
   </div>
 </template>
 
 <script>
-  import AxiosAsyncAwait from '@/components/AxiosAsyncAwait'
+  import InitialDataSort from '@/components/InitialDataSort'
   
   export default {
     name: 'App',
     components: {
-      AxiosAsyncAwait
+      InitialDataSort
     }
   }
 </script>
