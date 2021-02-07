@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <multi-checkbox-bound-array />
+    <axios-async-await />
   </div>
 </template>
 
 <script>
-  import MultiCheckboxBoundArray from '@/components/MultiCheckboxBoundArray'
+  import AxiosAsyncAwait from '@/components/AxiosAsyncAwait'
   
   export default {
     name: 'App',
     components: {
-      MultiCheckboxBoundArray
+      AxiosAsyncAwait
     }
   }
 </script>
