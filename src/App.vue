@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <initial-data-sort />
+    <person-manager />
   </div>
 </template>
 
 <script>
-  import InitialDataSort from '@/components/InitialDataSort'
+  import PersonManager from '@/components/person/PersonManager'
   
   export default {
     name: 'App',
     components: {
-      InitialDataSort
+      PersonManager
     }
   }
 </script>

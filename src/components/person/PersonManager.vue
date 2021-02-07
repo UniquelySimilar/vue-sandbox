@@ -42,8 +42,8 @@
 
 <script>
   import { mapState, mapGetters } from 'vuex'
-  import PersonTable from './PersonTable.vue'
-  import { Person } from '../globalvars'
+  import PersonTable from '@/components/person/PersonTable.vue'
+  import { Person } from '@/globalvars'
 
   export default {
     data() {
