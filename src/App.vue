@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <person-manager />
+    <reporter-tickets :dev="[]" />
   </div>
 </template>
 
 <script>
-  import PersonManager from '@/components/person/PersonManager'
+  import ReporterTickets from '@/components/vue-help-forum/ReporterTickets'
   
   export default {
     name: 'App',
     components: {
-      PersonManager
+      ReporterTickets
     }
   }
 </script>
