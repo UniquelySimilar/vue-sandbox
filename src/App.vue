@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <reporter-tickets :dev="[]" />
+    <input-max />
   </div>
 </template>
 
 <script>
-  import ReporterTickets from '@/components/vue-help-forum/ReporterTickets'
+  import InputMax from '@/components/ui/InputMax'
   
   export default {
     name: 'App',
     components: {
-      ReporterTickets
+      InputMax
     }
   }
 </script>
