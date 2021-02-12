@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <input-max />
+    <quiz-questions />
   </div>
 </template>
 
 <script>
-  import InputMax from '@/components/ui/InputMax'
+  import QuizQuestions from '@/components/stackoverflow/QuizQuestions'
   
   export default {
     name: 'App',
     components: {
-      InputMax
+      QuizQuestions
     }
   }
 </script>
