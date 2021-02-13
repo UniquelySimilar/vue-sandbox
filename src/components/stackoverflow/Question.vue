@@ -26,6 +26,12 @@
         answerId: 1
       }
     },
+    watch:{
+      question() {
+        // Reset on new question
+        this.answerId = 1;
+      }
+    },
     methods: {
       answerSelected() {
         this.$emit('answer-selected', this.answerId);

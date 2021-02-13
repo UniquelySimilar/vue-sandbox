@@ -4,22 +4,33 @@
       <h1 class="mb-5">{{ quiz.title }}</h1>
       <hr>
 
-      <question :question="currentQuestion" @answer-selected="processAnswer" />
+      <question v-if="!showResults" :question="currentQuestion" @answer-selected="processAnswer" />
 
       <div class="mt-5">
-        <button class="btn btn-primary" v-if="currentQuestionId > 1" @click="getPreviousQuestion">
+        <button class="btn btn-primary" v-if="currentQuestionId > 1 && !showResults" @click="getPreviousQuestion">
           prev
         </button>
-        <button v-if="currentQuestionId < finalQuestionId" class="btn btn-secondary" @click="getNextQuestion">
-          next
+        <button v-if="!showResults" class="btn btn-secondary" @click="getNextQuestion">
+          {{ nextButtonLabel }}
         </button>
       </div>
 
-      <div v-show="currentQuestionId === finalQuestionId">
+      <div v-if="showResults">
         <h3>Your Results</h3>
-        <p>
-          You are: {{ score() }}
-        </p>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>QUESTION ID</th>
+              <th>ANSWER ID</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(response, index) in responses" :key="index">
+              <td>{{ response.questionId }}</td>
+              <td>{{ response.answerId }}</td>
+            </tr>
+          </tbody>
+        </table>
 
         <button class="btn btn-success" @click="playAgain">
           Play Again!
@@ -42,13 +53,10 @@
       return {
         quiz: quiz,
         currentQuestionId: 1,
-        currentAnswerId: 0,
+        currentAnswerId: 1,
         previousQuestionId: 0,
-        // response: {
-        //   questionId: 0,
-        //   answerId: 0
-        // },
         responses: [],
+        showResults: false,
         errors: [],
         error: ''
       }
@@ -56,18 +64,25 @@
     computed: {
       currentQuestion() {
         return this.quiz.questions.find( question => {
-          return question.id = this.currentQuestionId;
+          return question.id === this.currentQuestionId;
         })
       },
-      finalQuestionId() {
-        let questionIds = this.quiz.questions.map( question => question.id);
-        return Math.max(...questionIds);
-      },
       nextQuestionId() {
-        let answer = this.currentQuestion.answers.find( answer => {
-          return answer.id === this.currentAnswerId;
-        });
-        return answer.nextQuestionId;
+        let retVal = 0;
+        if (this.currentAnswerId > 0) {
+          let tempAnswer = this.currentQuestion.answers.find( answer => {
+            return answer.id === this.currentAnswerId;
+          });
+          retVal = tempAnswer.nextQuestionId;
+        }
+      
+        return retVal;
+      },
+      lastQuestion() {
+        return this.currentQuestion.answers[0].nextQuestionId === 0;
+      },
+      nextButtonLabel() {
+        return this.lastQuestion ? 'Finish' : 'Next';
       }
     },
     methods: {
@@ -75,23 +90,32 @@
         this.currentQuestionId = this.previousQuestionId;
       },
       getNextQuestion() {
-        // TODO: Store current question id and answer id in responses
-        // Look for existing response for this question in case the previous button was pressed
+        // TODO: Look for existing response for this question in case the 'Previous' button was pressed
+        // If found, update answer
+        
+        // Store current question id and answer id in responses
         let response = { questionId: this.currentQuestionId, answerId: this.currentAnswerId };
         this.responses.push(response);
+
+        if (this.lastQuestion) {
+          this.showResults = true;
+          return;
+        }
+
         this.previousQuestionId = this.currentQuestionId;
         this.currentQuestionId = this.nextQuestionId;
-        console.log(this.responses);
+        //console.log(this.responses);
       },
       processAnswer(selectedAnswerId) {
-        //console.log('selected answer ID: ' + selectedAnswerId);
         this.currentAnswerId = selectedAnswerId;
       },
-      score: function () {
-
+      score() {
+        return 'TODO'
       },
       playAgain() {
         this.currentQuestionId = 1;
+        this.showResults = false;
+        this.responses = [];
       }
     }
   }

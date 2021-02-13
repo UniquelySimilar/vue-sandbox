@@ -40,6 +40,70 @@ const quiz = {
         {
           id: 1,
           text: "Yes",
+          nextQuestionId: 6
+        },
+        {
+          id: 2,
+          text: "No",
+          nextQuestionId: 7
+        },
+      ]
+    },
+    {
+      id: 4,
+      text: 'Question 4',
+      answers: [
+        {
+          id: 1,
+          text: "Yes",
+          nextQuestionId: 0
+        },
+        {
+          id: 2,
+          text: "No",
+          nextQuestionId: 0
+        },
+      ]
+    },
+    {
+      id: 5,
+      text: 'Question 5',
+      answers: [
+        {
+          id: 1,
+          text: "Yes",
+          nextQuestionId: 0
+        },
+        {
+          id: 2,
+          text: "No",
+          nextQuestionId: 0
+        },
+      ]
+    },
+    {
+      id: 6,
+      text: 'Question 6',
+      answers: [
+        {
+          id: 1,
+          text: "Yes",
+          nextQuestionId: 0
+        },
+        {
+          id: 2,
+          text: "No",
+          nextQuestionId: 0
+        },
+      ]
+    },
+    {
+      id: 7,
+      text: 'Question 7',
+      answers: [
+        {
+          id: 1,
+          text: "Yes",
           nextQuestionId: 0
         },
         {
