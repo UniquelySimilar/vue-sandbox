@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import QuizQuestions from '@/components/stackoverflow/QuizQuestions'
+  import QuizQuestions from '@/components/stackoverflow/quiz/QuizQuestions'
   
   export default {
     name: 'App',

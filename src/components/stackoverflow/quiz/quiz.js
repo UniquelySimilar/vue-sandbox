@@ -19,7 +19,7 @@ const quiz = {
     },
     {
       id: 2,
-      text: 'Was your property constructed pre 2000',
+      text: 'Was your property constructed pre 2000?',
       answers: [
         {
           id: 1,

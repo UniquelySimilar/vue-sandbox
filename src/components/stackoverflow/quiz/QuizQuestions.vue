@@ -20,14 +20,14 @@
         <table class="table table-bordered">
           <thead>
             <tr>
-              <th>QUESTION ID</th>
-              <th>ANSWER ID</th>
+              <th>QUESTION</th>
+              <th>ANSWER</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="(response, index) in responses" :key="index">
-              <td>{{ response.questionId }}</td>
-              <td>{{ response.answerId }}</td>
+              <td>{{ getQuestionText(response.questionId) }}</td>
+              <td>{{ getAnswerText(response.answerId) }}</td>
             </tr>
           </tbody>
         </table>
@@ -43,7 +43,7 @@
 
 <script>
   import quiz from './quiz.js';
-  import Question from '@/components/stackoverflow/Question'
+  import Question from '@/components/stackoverflow/quiz/Question'
 
   export default {
     components: {
@@ -104,7 +104,18 @@
 
         this.previousQuestionId = this.currentQuestionId;
         this.currentQuestionId = this.nextQuestionId;
-        //console.log(this.responses);
+      },
+      getQuestionText(id) {
+        let result = this.quiz.questions.find( question => {
+          return question.id === id;
+        });
+
+        return result.text;
+      },
+      getAnswerText(id) {
+        // NOTE: Since answers are currently limited to '1 = Yes' and '2 = No',
+        // this method does not need to involve any look up
+        return id === 1 ? 'Yes' : 'No';
       },
       processAnswer(selectedAnswerId) {
         this.currentAnswerId = selectedAnswerId;
