@@ -1,16 +1,21 @@
 <template>
   <div id="app" class="container">
-    <quiz-questions />
+    <div class="row">
+      <div class="col-md-2">
+        <router-link :to="{ name: 'userDetail', params: { id: 1 } }">User 1</router-link>
+      </div>
+      <div class="col-md-2">
+        <router-link :to="{ name: 'userDetail', params: { id: 2 } }">User 2</router-link>
+      </div>
+    </div>
+    <router-view />
   </div>
 </template>
 
 <script>
-  import QuizQuestions from '@/components/stackoverflow/quiz/QuizQuestions'
-  
   export default {
     name: 'App',
     components: {
-      QuizQuestions
     }
   }
 </script>
