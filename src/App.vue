@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <table-page-navigation />
+    <parent />
   </div>
 </template>
 
 <script>
-  import TablePageNavigation from '@/components/stackoverflow/pagination/TablePageNavigation'
+  import Parent from '@/components/vue-help-forum/emit-duplicate-object/Parent'
 
   export default {
     name: 'App',
     components: {
-      TablePageNavigation
+      Parent
     }
   }
 </script>
