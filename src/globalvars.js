@@ -22,4 +22,8 @@ class Entry {
   }
 }
 
-export { Person, persons, Entry };
+const submitUserForm = () => {
+  console.log('submitUserForm');
+}
+
+export { Person, persons, Entry, submitUserForm };
