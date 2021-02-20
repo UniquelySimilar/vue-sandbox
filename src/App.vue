@@ -1,24 +1,19 @@
 <template>
   <div id="app" class="container">
-    <dynamic-form-object :userProperties="userProperties" />
+    <parent />
   </div>
 </template>
 
 <script>
-  import DynamicFormObject from '@/components/vue-help-forum/DynamicFormObject'
+  import Parent from '@/components/vuetest/react-to-vuex/Parent'
 
   export default {
     name: 'App',
     components: {
-      DynamicFormObject
+      Parent
     },
     data() {
       return {
-        userProperties: {
-          id: 0,
-          name: '',
-          email: ''
-        }
       }
     }
   }
