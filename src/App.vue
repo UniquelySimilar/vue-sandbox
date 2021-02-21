@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <selected-row-users />
+    <carousel />
   </div>
 </template>
 
 <script>
-  import SelectedRowUsers from '@/components/vue-help-forum/selected-rows/SelectedRows'
+  import Carousel from '@/components/vuetest/Carousel'
 
   export default {
     name: 'App',
     components: {
-      SelectedRowUsers
+      Carousel
     },
     data() {
       return {

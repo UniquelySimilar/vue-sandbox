@@ -4,6 +4,8 @@ import router from './router'
 //import store from './store'
 import store from './store/react-to-vuex-store.js'
 
+import 'jquery'
+import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
 
 Vue.config.productionTip = false
