@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <selected-row-users />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/vuetest/react-to-vuex/Parent'
+  import SelectedRowUsers from '@/components/vue-help-forum/selected-rows/SelectedRows'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      SelectedRowUsers
     },
     data() {
       return {
