@@ -4,9 +4,10 @@ import router from './router'
 //import store from './store'
 import store from './store/react-to-vuex-store.js'
 
-import 'jquery'
-import 'bootstrap'
 import 'bootstrap/dist/css/bootstrap.css'
+// Uncomment when using Bootstrap components
+//import 'jquery'
+//import 'bootstrap'
 
 Vue.config.productionTip = false
 

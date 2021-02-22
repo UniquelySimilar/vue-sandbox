@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <carousel />
+    <bind-empty-array />
   </div>
 </template>
 
 <script>
-  import Carousel from '@/components/vuetest/Carousel'
+  import BindEmptyArray from '@/components/stackoverflow/bind-empty-array/BindEmptyArray'
 
   export default {
     name: 'App',
     components: {
-      Carousel
+      BindEmptyArray
     },
     data() {
       return {
