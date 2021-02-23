@@ -1,19 +1,22 @@
 <template>
   <div id="app" class="container">
-    <two-select-tags />
+    <parent :user="user" />
   </div>
 </template>
 
 <script>
-  import TwoSelectTags from '@/components/stackoverflow/two-select-tags/TwoSelectTags'
+  import Parent from '@/components/stackoverflow/custom-select/Parent'
 
   export default {
     name: 'App',
     components: {
-      TwoSelectTags
+      Parent
     },
     data() {
       return {
+        user: {
+          continent: 'africa'
+        }
       }
     }
   }
