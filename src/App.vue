@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <bind-empty-array />
+    <two-select-tags />
   </div>
 </template>
 
 <script>
-  import BindEmptyArray from '@/components/stackoverflow/bind-empty-array/BindEmptyArray'
+  import TwoSelectTags from '@/components/stackoverflow/two-select-tags/TwoSelectTags'
 
   export default {
     name: 'App',
     components: {
-      BindEmptyArray
+      TwoSelectTags
     },
     data() {
       return {
