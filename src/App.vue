@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <function-inside-loop />
+    <vuex-module />
   </div>
 </template>
 
 <script>
-  import FunctionInsideLoop from '@/components/vue-help-forum/misc/FunctionInsideLoop'
+  import VuexModule from '@/components/vuetest/vuex-module/VuexModule'
 
   export default {
     name: 'App',
     components: {
-      FunctionInsideLoop
+      VuexModule
     },
     data() {
       return {
