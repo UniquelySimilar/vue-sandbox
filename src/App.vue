@@ -1,22 +1,19 @@
 <template>
   <div id="app" class="container">
-    <parent :user="user" />
+    <function-inside-loop />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/custom-select/Parent'
+  import FunctionInsideLoop from '@/components/vue-help-forum/misc/FunctionInsideLoop'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      FunctionInsideLoop
     },
     data() {
       return {
-        user: {
-          continent: 'africa'
-        }
       }
     }
   }
