@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <vuex-module />
+    <parent />
   </div>
 </template>
 
 <script>
-  import VuexModule from '@/components/vuetest/vuex-module/VuexModule'
+  import Parent from '@/components/stackoverflow/hide-on-error/Parent'
 
   export default {
     name: 'App',
     components: {
-      VuexModule
+      Parent
     },
     data() {
       return {
