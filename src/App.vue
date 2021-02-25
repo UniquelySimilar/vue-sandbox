@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <sort-divs />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/hide-on-error/Parent'
+  import SortDivs from '@/components/stackoverflow/sort-divs/SortDivs'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      SortDivs
     },
     data() {
       return {
