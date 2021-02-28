@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import App from './App.vue'
-import router from './router'
+
+//import router from './router'
+import router from '@/components/stackoverflow/router-props/router'
+
 //import store from './store'
 //import store from './store/react-to-vuex-store.js'
 //import store from '@/components/vuetest/vuex-module/store.js'
