@@ -1,15 +1,15 @@
 <template>
   <div id="app" class="container">
-    <set-focus />
+    <multiple-button-states />
   </div>
 </template>
 
 <script>
-  import SetFocus from '@/components/stackoverflow/misc/SetFocus'
+  import MultipleButtonStates from '@/components/stackoverflow/misc/MultipleButtonStates'
   export default {
     name: 'App',
     components: {
-      SetFocus
+      MultipleButtonStates
     },
     data() {
       return {
