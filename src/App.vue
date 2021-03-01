@@ -1,13 +1,15 @@
 <template>
   <div id="app" class="container">
-    <router-view />
+    <set-focus />
   </div>
 </template>
 
 <script>
+  import SetFocus from '@/components/stackoverflow/misc/SetFocus'
   export default {
     name: 'App',
     components: {
+      SetFocus
     },
     data() {
       return {
