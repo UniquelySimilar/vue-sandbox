@@ -1,15 +1,15 @@
 <template>
   <div id="app" class="container">
-    <multiple-button-states />
+    <email-validation />
   </div>
 </template>
 
 <script>
-  import MultipleButtonStates from '@/components/stackoverflow/misc/MultipleButtonStates'
+  import EmailValidation from '@/components/stackoverflow/misc/EmailValidation'
   export default {
     name: 'App',
     components: {
-      MultipleButtonStates
+      EmailValidation
     },
     data() {
       return {
