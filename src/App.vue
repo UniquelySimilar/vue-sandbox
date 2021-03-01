@@ -1,15 +1,15 @@
 <template>
   <div id="app" class="container">
-    <email-validation />
+    <hidden-input-substitute />
   </div>
 </template>
 
 <script>
-  import EmailValidation from '@/components/stackoverflow/misc/EmailValidation'
+  import HiddenInputSubstitute from '@/components/stackoverflow/misc/HiddenInputSubstitute'
   export default {
     name: 'App',
     components: {
-      EmailValidation
+      HiddenInputSubstitute
     },
     data() {
       return {
