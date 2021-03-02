@@ -7,6 +7,7 @@ import router from '@/components/stackoverflow/router-props/router'
 //import store from './store'
 //import store from './store/react-to-vuex-store.js'
 //import store from '@/components/vuetest/vuex-module/store.js'
+import store from '@/components/stackoverflow/replace-emit-with-vuex/store'
 
 import 'bootstrap/dist/css/bootstrap.css'
 // Uncomment when using Bootstrap components
@@ -17,6 +18,6 @@ Vue.config.productionTip = false
 
 new Vue({
   router,
-  //store,
+  store,
   render: h => h(App),
 }).$mount('#app')

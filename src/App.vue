@@ -1,15 +1,15 @@
 <template>
   <div id="app" class="container">
-    <hidden-input-substitute />
+    <parent />
   </div>
 </template>
 
 <script>
-  import HiddenInputSubstitute from '@/components/stackoverflow/misc/HiddenInputSubstitute'
+  import Parent from '@/components/stackoverflow/replace-emit-with-vuex/Parent'
   export default {
     name: 'App',
     components: {
-      HiddenInputSubstitute
+      Parent
     },
     data() {
       return {
