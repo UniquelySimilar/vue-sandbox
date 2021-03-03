@@ -1,16 +1,17 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <router-wildcard-navbar />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/components-as-dependency/Parent'
+  import RouterWildcardNavbar from '@/components/stackoverflow/router-wildcard-match/RouterWildcardNavbar'
   
   export default {
     name: 'App',
     components: {
-      Parent
+      RouterWildcardNavbar
     },
     data() {
       return {
