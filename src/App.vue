@@ -5,7 +5,8 @@
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/replace-emit-with-vuex/Parent'
+  import Parent from '@/components/stackoverflow/components-as-dependency/Parent'
+  
   export default {
     name: 'App',
     components: {
