@@ -1,17 +1,16 @@
 <template>
   <div id="app" class="container">
-    <router-wildcard-navbar />
-    <router-view></router-view>
+    <home />
   </div>
 </template>
 
 <script>
-  import RouterWildcardNavbar from '@/components/stackoverflow/router-wildcard-match/RouterWildcardNavbar'
+  import Home from '@/components/stackoverflow/multistep-form/Home'
   
   export default {
     name: 'App',
     components: {
-      RouterWildcardNavbar
+      Home
     },
     data() {
       return {
