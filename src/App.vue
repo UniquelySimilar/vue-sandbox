@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <swap-array-objects />
+    <parent />
   </div>
 </template>
 
 <script>
-  import SwapArrayObjects from '@/components/stackoverflow/swap-array-objects/SwapArrayObjects'
+  import Parent from '@/components/stackoverflow/watch-prop/Parent'
   
   export default {
     name: 'App',
     components: {
-      SwapArrayObjects
+      Parent
     },
     data() {
       return {
