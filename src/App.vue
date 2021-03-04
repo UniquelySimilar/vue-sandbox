@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <home />
+    <swap-array-objects />
   </div>
 </template>
 
 <script>
-  import Home from '@/components/stackoverflow/multistep-form/Home'
+  import SwapArrayObjects from '@/components/stackoverflow/swap-array-objects/SwapArrayObjects'
   
   export default {
     name: 'App',
     components: {
-      Home
+      SwapArrayObjects
     },
     data() {
       return {
