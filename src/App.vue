@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/watch-prop/Parent'
+  import Parent from '@/components/stackoverflow/watched-prop-no-update/Parent'
   
   export default {
     name: 'App',
