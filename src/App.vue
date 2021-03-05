@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <ticket-wrapper />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/watched-prop-no-update/Parent'
+  import TicketWrapper from '@/components/stackoverflow/get-nested-elements/TicketWrapper'
   
   export default {
     name: 'App',
     components: {
-      Parent
+      TicketWrapper
     },
     data() {
       return {
