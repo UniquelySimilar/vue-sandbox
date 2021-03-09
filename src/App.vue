@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <bootstrap-jquery-popper />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/slides-prop/Parent'
+  import BootstrapJqueryPopper from '@/components/stackoverflow/bootstrap-jquery-popper/BootstrapJqueryPopper'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      BootstrapJqueryPopper
     },
     data() {
       return {
