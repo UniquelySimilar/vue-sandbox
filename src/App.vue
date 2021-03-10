@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <bootstrap-jquery-popper />
+    <parent />
   </div>
 </template>
 
 <script>
-  import BootstrapJqueryPopper from '@/components/stackoverflow/bootstrap-jquery-popper/BootstrapJqueryPopper'
+  import Parent from '@/components/stackoverflow/child-button-hide-parent-div/Parent'
 
   export default {
     name: 'App',
     components: {
-      BootstrapJqueryPopper
+      Parent
     },
     data() {
       return {
