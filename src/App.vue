@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <multi-concurrent-reqs />
+    <clear-filters />
   </div>
 </template>
 
 <script>
-  import MultiConcurrentReqs from '@/components/vuetest/misc/MultiConcurrentReqs'
+  import ClearFilters from '@/components/stackoverflow/clear-filters/ClearFilters'
 
   export default {
     name: 'App',
     components: {
-      MultiConcurrentReqs
+      ClearFilters
     },
     data() {
       return {
