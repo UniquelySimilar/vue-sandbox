@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <multi-concurrent-reqs />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/child-button-hide-parent-div/Parent'
+  import MultiConcurrentReqs from '@/components/vuetest/misc/MultiConcurrentReqs'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      MultiConcurrentReqs
     },
     data() {
       return {
