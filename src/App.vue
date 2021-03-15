@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <file-upload />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/radio-button-vuex/Parent'
+  import FileUpload from '@/components/vue-help-forum/misc/FileUpload'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      FileUpload
     },
     data() {
       return {
