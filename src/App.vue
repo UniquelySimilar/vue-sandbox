@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <clear-filters />
+    <parent />
   </div>
 </template>
 
 <script>
-  import ClearFilters from '@/components/stackoverflow/clear-filters/ClearFilters'
+  import Parent from '@/components/stackoverflow/radio-button-vuex/Parent'
 
   export default {
     name: 'App',
     components: {
-      ClearFilters
+      Parent
     },
     data() {
       return {
