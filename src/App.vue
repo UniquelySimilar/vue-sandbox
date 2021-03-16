@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <file-upload />
+    <input-bound-object-array />
   </div>
 </template>
 
 <script>
-  import FileUpload from '@/components/vue-help-forum/misc/FileUpload'
+  import InputBoundObjectArray from '@/components/stackoverflow/input-bound-object-array/InputBoundObjectArray'
 
   export default {
     name: 'App',
     components: {
-      FileUpload
+      InputBoundObjectArray
     },
     data() {
       return {
