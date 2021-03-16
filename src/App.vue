@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <input-bound-object-array />
+    <joke-list />
   </div>
 </template>
 
 <script>
-  import InputBoundObjectArray from '@/components/stackoverflow/input-bound-object-array/InputBoundObjectArray'
+  import JokeList from '@/components/stackoverflow/update-div-contents/JokeList'
 
   export default {
     name: 'App',
     components: {
-      InputBoundObjectArray
+      JokeList
     },
     data() {
       return {
