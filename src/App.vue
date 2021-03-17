@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <joke-list />
+    <bind-multiple-checkboxes />
   </div>
 </template>
 
 <script>
-  import JokeList from '@/components/stackoverflow/update-div-contents/JokeList'
+  import BindMultipleCheckboxes from '@/components/stackoverflow/misc/BindMultipleCheckboxes'
 
   export default {
     name: 'App',
     components: {
-      JokeList
+      BindMultipleCheckboxes
     },
     data() {
       return {
