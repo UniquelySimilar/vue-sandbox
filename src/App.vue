@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <bind-multiple-checkboxes />
+    <import-object-to-data />
   </div>
 </template>
 
 <script>
-  import BindMultipleCheckboxes from '@/components/stackoverflow/misc/BindMultipleCheckboxes'
+  import ImportObjectToData from '@/components/stackoverflow/import-object-to-data/ImportObjectToData'
 
   export default {
     name: 'App',
     components: {
-      BindMultipleCheckboxes
+      ImportObjectToData
     },
     data() {
       return {
