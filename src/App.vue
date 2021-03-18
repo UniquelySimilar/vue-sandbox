@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <import-object-to-data />
+    <parent />
   </div>
 </template>
 
 <script>
-  import ImportObjectToData from '@/components/stackoverflow/import-object-to-data/ImportObjectToData'
+  import Parent from '@/components/stackoverflow/computed-css-class/Parent'
 
   export default {
     name: 'App',
     components: {
-      ImportObjectToData
+      Parent
     },
     data() {
       return {
