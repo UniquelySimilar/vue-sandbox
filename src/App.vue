@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/computed-css-class/Parent'
+  import Parent from '@/components/stackoverflow/bootstrap-modal-alt/Parent'
 
   export default {
     name: 'App',
