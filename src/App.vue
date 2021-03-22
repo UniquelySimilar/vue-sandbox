@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <access-this-in-foreach />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/bootstrap-modal-alt/Parent'
+  import AccessThisInForeach from '@/components/vuetest/misc/AccessThisInForeach'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      AccessThisInForeach
     },
     data() {
       return {
