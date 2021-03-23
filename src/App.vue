@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <access-this-in-foreach />
+    <sort-table-by-columns />
   </div>
 </template>
 
 <script>
-  import AccessThisInForeach from '@/components/vuetest/misc/AccessThisInForeach'
+  import SortTableByColumns from '@/components/stackoverflow/misc/SortTableByColumns'
 
   export default {
     name: 'App',
     components: {
-      AccessThisInForeach
+      SortTableByColumns
     },
     data() {
       return {
