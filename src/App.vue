@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <sort-table-by-columns />
+    <parent />
   </div>
 </template>
 
 <script>
-  import SortTableByColumns from '@/components/stackoverflow/misc/SortTableByColumns'
+  import Parent from '@/components/stackoverflow/two-filtered-lists/Parent'
 
   export default {
     name: 'App',
     components: {
-      SortTableByColumns
+      Parent
     },
     data() {
       return {
