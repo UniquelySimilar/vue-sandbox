@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <register />
+    <parent />
   </div>
 </template>
 
 <script>
-  import Register from '@/components/stackoverflow/verify-checkbox-on-submit/Register'
+  import Parent from '@/components/stackoverflow/emit-two-properties/Parent'
 
   export default {
     name: 'App',
     components: {
-      Register
+      Parent
     },
     data() {
       return {
