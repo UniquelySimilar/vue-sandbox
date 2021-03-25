@@ -2,7 +2,7 @@ import Vue from 'vue'
 import App from './App.vue'
 
 //import router from './router'
-//import router from '@/components/stackoverflow/router-link/router'
+import router from '@/components/stackoverflow/router-params-example/router'
 
 //import store from './store'
 //import store from '@/components/stackoverflow/radio-button-vuex/store'
@@ -15,7 +15,7 @@ import 'bootstrap/dist/css/bootstrap.css'
 Vue.config.productionTip = false
 
 new Vue({
-  // router,
+  router,
   // store,
   render: h => h(App),
 }).$mount('#app')
