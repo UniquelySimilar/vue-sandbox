@@ -5,7 +5,7 @@ import App from './App.vue'
 //import router from '@/components/stackoverflow/router-params-example/router'
 
 //import store from './store'
-//import store from '@/components/stackoverflow/radio-button-vuex/store'
+import store from '@/components/vuetest/vuex-module/store'
 
 import 'bootstrap/dist/css/bootstrap.css'
 // Uncomment when using Bootstrap components
@@ -16,6 +16,6 @@ Vue.config.productionTip = false
 
 new Vue({
   //router,
-  //store,
+  store,
   render: h => h(App),
 }).$mount('#app')
