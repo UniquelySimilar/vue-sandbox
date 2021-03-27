@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <vuex-module />
+    <input-with-list />
   </div>
 </template>
 
 <script>
-  import VuexModule from '@/components/vuetest/vuex-module/VuexModule'
+  import InputWithList from '@/components/ui/InputWithList'
 
   export default {
     name: 'App',
     components: {
-      VuexModule
+      InputWithList
     },
     data() {
       return {

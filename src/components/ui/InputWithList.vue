@@ -32,13 +32,18 @@
       return {
         searchValue: '',
         searchHistory: [],
-        showSearchHistory: false
+        showSearchHistory: false,
+        searchHistoryMaxLength: 5
       }
     },
     methods: {
       processSearch() {
         if ( this.searchHistory.indexOf(this.searchValue) === -1) {
           this.searchHistory.push(this.searchValue);
+          if (this.searchHistory.length > this.searchHistoryMaxLength) {
+            // Remove the first (oldest) element
+            this.searchHistory.shift();
+          }
         }
         this.searchValue = '';
       },
@@ -51,7 +56,8 @@
         this.searchValue = '';
       },
       onClick() {
-        this.showSearchHistory = true;
+        // Toggle show/hide
+        this.showSearchHistory = !this.showSearchHistory;
       },
       onInput() {
         this.showSearchHistory = false;
