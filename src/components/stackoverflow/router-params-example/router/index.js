@@ -4,7 +4,7 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter);
 
 import Home from '@/components/stackoverflow/router-params-example/Home'
-import Detail from '@/components/stackoverflow/router-params-example/Detail'
+import ProductAll from '@/components/stackoverflow/router-params-example/ProductAll'
 
 const routes = [
   {
@@ -13,9 +13,9 @@ const routes = [
     component: Home
   },
   {
-    path: '/detail/:id',
-    name: 'detail',
-    component: Detail,
+    path: '/productall/:id',
+    name: 'productall',
+    component: ProductAll,
     props: true
   }
 ]

@@ -3,7 +3,7 @@
     <h4>Home</h4>
     <div class="row">
       <div class="col-md-6">
-        <router-link class="btn btn-primary" :to="{ name: 'detail', params: { id: detailId } }">Show Detail</router-link>
+        <router-link class="btn btn-primary" :to="{ name: 'productall', params: { id: productId } }">Product All</router-link>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
   export default {
     data() {
       return {
-        detailId: 1
+        productId: '603aaaf5dead94fee94d2811'
       }
     }
   }
