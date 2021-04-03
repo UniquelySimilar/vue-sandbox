@@ -1,13 +1,16 @@
 <template>
   <div id="app" class="container">
-    <router-view></router-view>
+    <parent />
   </div>
 </template>
 
 <script>
+  import Parent from '@/components/stackoverflow/watch-search-prop/Parent'
+
   export default {
     name: 'App',
     components: {
+      Parent
     },
     data() {
       return {
