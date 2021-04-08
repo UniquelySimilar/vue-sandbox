@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <vuex-local-storage />
+    <divide-array />
   </div>
 </template>
 
 <script>
-  import VuexLocalStorage from '@/components/stackoverflow/vuex-local-storage/VuexLocalStorage'
+  import DivideArray from '@/components/vuetest/misc/DivideArray'
 
   export default {
     name: 'App',
     components: {
-      VuexLocalStorage
+      DivideArray
     },
     data() {
       return {
