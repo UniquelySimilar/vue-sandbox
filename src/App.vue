@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <vuex-local-storage />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/watch-search-prop/Parent'
+  import VuexLocalStorage from '@/components/stackoverflow/vuex-local-storage/VuexLocalStorage'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      VuexLocalStorage
     },
     data() {
       return {
