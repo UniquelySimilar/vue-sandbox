@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <divide-array />
+    <my-slider />
   </div>
 </template>
 
 <script>
-  import DivideArray from '@/components/vuetest/misc/DivideArray'
+  import MySlider from '@/components/stackoverflow/parent-child-relationship/MySlider'
 
   export default {
     name: 'App',
     components: {
-      DivideArray
+      MySlider
     },
     data() {
       return {
