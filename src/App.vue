@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <my-slider />
+    <flash-error-auto-close />
   </div>
 </template>
 
 <script>
-  import MySlider from '@/components/stackoverflow/parent-child-relationship/MySlider'
+  import FlashErrorAutoClose from '@/components/stackoverflow/misc/FlashErrorAutoClose'
 
   export default {
     name: 'App',
     components: {
-      MySlider
+      FlashErrorAutoClose
     },
     data() {
       return {
