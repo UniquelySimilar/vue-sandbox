@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <flash-error-auto-close />
+    <parent-form />
   </div>
 </template>
 
 <script>
-  import FlashErrorAutoClose from '@/components/stackoverflow/misc/FlashErrorAutoClose'
+  import ParentForm from '@/components/vue-help-forum/form-input-component/ParentForm'
 
   export default {
     name: 'App',
     components: {
-      FlashErrorAutoClose
+      ParentForm
     },
     data() {
       return {
