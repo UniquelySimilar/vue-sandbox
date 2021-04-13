@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent-form />
+    <parent />
   </div>
 </template>
 
 <script>
-  import ParentForm from '@/components/vue-help-forum/form-input-component/ParentForm'
+  import Parent from '@/components/stackoverflow/sibling-communication/Parent'
 
   export default {
     name: 'App',
     components: {
-      ParentForm
+      Parent
     },
     data() {
       return {
