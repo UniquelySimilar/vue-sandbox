@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <radio-toggle-show />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/sibling-communication/Parent'
+  import RadioToggleShow from '@/components/stackoverflow/radio-toggle-show/RadioToggleShow'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      RadioToggleShow
     },
     data() {
       return {
