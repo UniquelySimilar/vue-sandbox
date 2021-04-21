@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <radio-toggle-show />
+    <parent />
   </div>
 </template>
 
 <script>
-  import RadioToggleShow from '@/components/stackoverflow/radio-toggle-show/RadioToggleShow'
+  import Parent from '@/components/stackoverflow/chartjs/Parent'
 
   export default {
     name: 'App',
     components: {
-      RadioToggleShow
+      Parent
     },
     data() {
       return {
