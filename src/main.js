@@ -12,6 +12,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 //import 'jquery'
 //import 'bootstrap'
 
+import MixinPlugin from '@/components/vuetest/plugins/mixin-plugin.js'
+Vue.use(MixinPlugin)
+
 Vue.config.productionTip = false
 
 new Vue({

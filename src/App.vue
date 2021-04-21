@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <mixin-plugin />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/chartjs/Parent'
+  import MixinPlugin from '@/components/vuetest/plugins/MixinPlugin'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      MixinPlugin
     },
     data() {
       return {
