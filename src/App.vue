@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <mixin-plugin />
+    <json-parse />
   </div>
 </template>
 
 <script>
-  import MixinPlugin from '@/components/vuetest/plugins/MixinPlugin'
+  import JsonParse from '@/components/jstest/JsonParse'
 
   export default {
     name: 'App',
     components: {
-      MixinPlugin
+      JsonParse
     },
     data() {
       return {
