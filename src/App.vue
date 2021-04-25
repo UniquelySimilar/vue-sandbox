@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <json-parse />
+    <parent />
   </div>
 </template>
 
 <script>
-  import JsonParse from '@/components/jstest/JsonParse'
+  import Parent from '@/components/stackoverflow/form-modal/Parent'
 
   export default {
     name: 'App',
     components: {
-      JsonParse
+      Parent
     },
     data() {
       return {
