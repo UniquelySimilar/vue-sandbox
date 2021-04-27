@@ -4,14 +4,14 @@
     <div class="row">
       <div class="col-md-6">
         <button class="btn btn-secondary" @click="increment">Increment</button>
-        <span class="count-span">Count is: {{ count }}, double is: {{ double }}</span>
+        <span class="count-span">Count is: {{ getCount }}, double is: {{ getDouble }}</span>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-  import { reactive, computed } from 'vue';
+  import { reactive, computed } from '@vue/composition-api';
 
   export default {
     setup() {
@@ -21,12 +21,20 @@
       });
 
       function increment() {
-        state.count++
+        state.count++;
+      }
+
+      function getCount() {
+        return state.count;
+      }
+      
+      function getDouble() {
+        return state.double;
       }
 
       return {
-        count,
-        double,
+        getCount,
+        getDouble,
         increment
       }
     }
