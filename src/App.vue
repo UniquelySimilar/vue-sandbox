@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/form-modal/Parent'
+  import Parent from '@/components/vuetest/composition-api/Parent'
 
   export default {
     name: 'App',
