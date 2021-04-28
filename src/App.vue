@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <import-local-js />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/vuetest/composition-api/Parent'
+  import ImportLocalJs from '@/components/vuetest/import-local-js/ImportLocalJs'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      ImportLocalJs
     },
     data() {
       return {
