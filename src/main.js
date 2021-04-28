@@ -15,9 +15,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 //import MixinPlugin from '@/components/vuetest/plugins/mixin-plugin.js'
 //Vue.use(MixinPlugin)
 
-import VueCompositionAPI from '@vue/composition-api'
-Vue.use(VueCompositionAPI)
-
 Vue.config.productionTip = false
 
 new Vue({
