@@ -1,16 +1,17 @@
 <template>
   <div id="app" class="container">
-    <import-local-js />
+    <router-params-change-navbar />
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
-  import ImportLocalJs from '@/components/vuetest/import-local-js/ImportLocalJs'
+  import RouterParamsChangeNavbar from '@/components/stackoverflow/router-params-change/RouterParamsChangeNavbar'
 
   export default {
     name: 'App',
     components: {
-      ImportLocalJs
+      RouterParamsChangeNavbar
     },
     data() {
       return {
@@ -18,7 +19,3 @@
     }
   }
 </script>
-
-<style>
-
-</style>
