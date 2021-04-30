@@ -1,17 +1,16 @@
 <template>
   <div id="app" class="container">
-    <router-params-change-navbar />
-    <router-view></router-view>
+    <parent />
   </div>
 </template>
 
 <script>
-  import RouterParamsChangeNavbar from '@/components/stackoverflow/router-params-change/RouterParamsChangeNavbar'
+  import Parent from '@/components/stackoverflow/change-siblings-color/Parent'
 
   export default {
     name: 'App',
     components: {
-      RouterParamsChangeNavbar
+      Parent
     },
     data() {
       return {
