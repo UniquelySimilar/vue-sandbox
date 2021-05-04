@@ -15,6 +15,9 @@ import 'bootstrap/dist/css/bootstrap.css'
 //import MixinPlugin from '@/components/vuetest/plugins/mixin-plugin.js'
 //Vue.use(MixinPlugin)
 
+import VueEllipseProgress from 'vue-ellipse-progress';
+Vue.use(VueEllipseProgress)
+
 Vue.config.productionTip = false
 
 new Vue({

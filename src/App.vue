@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/change-siblings-color/Parent'
+  import Parent from '@/components/stackoverflow/vue-ellipse-progress/Parent'
 
   export default {
     name: 'App',
