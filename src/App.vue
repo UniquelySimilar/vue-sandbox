@@ -5,7 +5,7 @@
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/vue-ellipse-progress/Parent'
+  import Parent from '@/components/stackoverflow/bootstrap-modal-no-jquery/Parent'
 
   export default {
     name: 'App',
