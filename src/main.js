@@ -1,22 +1,16 @@
 import Vue from 'vue'
 import App from './App.vue'
 
-//import router from './router'
-//import router from '@/components/stackoverflow/route-param-modal/router'
+// import router from './router'
+// import router from '@/components/stackoverflow/route-param-modal/router'
 
-//import store from './store'
-//import store from '@/components/stackoverflow/change-siblings-color/store'
+// import store from './store'
+// import store from '@/components/stackoverflow/change-siblings-color/store'
 
 import 'bootstrap/dist/css/bootstrap.css'
 // Uncomment when using Bootstrap components
-//import 'jquery'
-//import 'bootstrap'
-
-//import MixinPlugin from '@/components/vuetest/plugins/mixin-plugin.js'
-//Vue.use(MixinPlugin)
-
-import VueEllipseProgress from 'vue-ellipse-progress';
-Vue.use(VueEllipseProgress)
+// import 'jquery'
+// import 'bootstrap'
 
 Vue.config.productionTip = false
 

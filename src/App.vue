@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <add-object-property />
+    <parent />
   </div>
 </template>
 
 <script>
-  import AddObjectProperty from '@/components/stackoverflow/add-object-property/AddObjectProperty'
+  import Parent from '@/components/stackoverflow/list-pagination/Parent'
 
   export default {
     name: 'App',
     components: {
-      AddObjectProperty
+      Parent
     },
     data() {
       return {
