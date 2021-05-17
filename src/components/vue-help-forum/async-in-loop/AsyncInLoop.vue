@@ -62,20 +62,17 @@
       }
     },
     methods: {
-      getMissions() {
-        return new Promise(resolve => {
-          setTimeout( () => {
-            resolve(this.missions);
-          }, 500)
-        })
+      wait(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
       },
-      getMapForMission(mission) {
+      async getMissions() {
+        await this.wait(500);
+        return this.missions;
+      },
+      async getMapForMission(mission) {
+        await this.wait(500);
         let associatedMap = this.missionMaps.find( missionMap => missionMap.id === mission.mapId);
-        return new Promise(resolve => {
-          setTimeout( () => {
-            resolve(associatedMap)
-          }, 500)
-        })
+        return associatedMap;
       },
       async missionLoop(missions) {
         for (let i = 0; i < missions.length; i++) {
@@ -91,12 +88,9 @@
         this.displayMissionsWithMaps = true;
       }
     },
-    created() {
-      this.getMissions()
-      .then(missions => {
-        //console.log(missions);
-        this.missionLoop(missions);
-      })
+    async created() {
+      let missions = await this.getMissions();
+      await this.missionLoop(missions);
     }
   };
 </script>
