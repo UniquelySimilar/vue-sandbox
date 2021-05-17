@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <parent />
+    <async-in-loop />
   </div>
 </template>
 
 <script>
-  import Parent from '@/components/stackoverflow/list-pagination/Parent'
+  import AsyncInLoop from '@/components/vue-help-forum/async-in-loop/AsyncInLoop'
 
   export default {
     name: 'App',
     components: {
-      Parent
+      AsyncInLoop
     },
     data() {
       return {
