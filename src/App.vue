@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <async-in-loop />
+    <sort-by-date />
   </div>
 </template>
 
 <script>
-  import AsyncInLoop from '@/components/vue-help-forum/async-in-loop/AsyncInLoop'
+  import SortByDate from '@/components/vue-help-forum/sort-by-date/SortByDate'
 
   export default {
     name: 'App',
     components: {
-      AsyncInLoop
+      SortByDate
     },
     data() {
       return {

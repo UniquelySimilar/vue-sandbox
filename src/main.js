@@ -5,7 +5,7 @@ import App from './App.vue'
 // import router from '@/components/stackoverflow/route-param-modal/router'
 
 // import store from './store'
-// import store from '@/components/stackoverflow/change-siblings-color/store'
+import store from '@/components/vue-help-forum/sort-by-date/store'
 
 import 'bootstrap/dist/css/bootstrap.css'
 // Uncomment when using Bootstrap components
@@ -16,6 +16,6 @@ Vue.config.productionTip = false
 
 new Vue({
   //router,
-  //store,
+  store,
   render: h => h(App),
 }).$mount('#app')
