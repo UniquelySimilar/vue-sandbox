@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <sort-by-date />
+    <icon-list />
   </div>
 </template>
 
 <script>
-  import SortByDate from '@/components/vue-help-forum/sort-by-date/SortByDate'
+  import IconList from '@/components/stackoverflow/font-awesome-list/IconList'
 
   export default {
     name: 'App',
     components: {
-      SortByDate
+      IconList
     },
     data() {
       return {
