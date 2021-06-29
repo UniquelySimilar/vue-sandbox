@@ -1,16 +1,16 @@
 <template>
   <div id="app" class="container">
-    <icon-list />
+    <vuex-module-action />
   </div>
 </template>
 
 <script>
-  import IconList from '@/components/stackoverflow/font-awesome-list/IconList'
+  import VuexModuleAction from '@/components/stackoverflow/vuex-module-action/VuexModuleAction'
 
   export default {
     name: 'App',
     components: {
-      IconList
+      VuexModuleAction
     },
     data() {
       return {
